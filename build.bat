@@ -61,9 +61,9 @@ for /f "tokens=*" %%L in (build-files) do (
 
     for %%i in (!file!) do (
       if exist %%~si\nul (
-        robocopy "!file!" "%build%/!target!" /s /e
+        robocopy "!file!" "%build%\!target!" /s /e
       ) else (
-        copy "!file!" "%build%/!target!"
+        copy "!file!" "%build%\!target!"
       )
     )
   )
